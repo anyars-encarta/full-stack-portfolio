@@ -1,20 +1,20 @@
-export default{
-    name:'brands',
-    title:'Brands',
+export default {
+    name: 'brands',
+    title: 'Brands',
     type: 'document',
-    fields:[
+    fields: [
         {
-            name:'imgUrl',
-            title:'ImgUrl',
+            name: 'imgUrl',
+            title: 'ImgUrl',
             type: 'image',
             options: {
-              hotspot: true,
+                hotspot: true,
             },
         },
         {
-            name:'name',
-            title:'Name',
-            type:'string'
+            name: 'name',
+            title: 'Name',
+            type: 'string'
         }
     ]
 }

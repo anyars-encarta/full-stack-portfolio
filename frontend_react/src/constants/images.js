@@ -17,6 +17,17 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
+import bootstrap from '../assets/bootstrap.png';
+import chakraui from '../assets/chakraui.png';
+import mongodb from '../assets/mongodb.png';
+import mysql from '../assets/mysql.png';
+import nodejs from '../assets/nodejs.png';
+import postgresql from '../assets/postgresql.png';
+import rails from '../assets/rails.png';
+import ruby from '../assets/ruby.png';
+import sqlserver from '../assets/sqlserver.png';
+import tailwind from '../assets/tailwind.png';
+import webpack from '../assets/webpack.png';
 
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
@@ -55,6 +66,17 @@ export default {
   sass,
   typescript,
   vue,
+  bootstrap,
+  chakraui,
+  mongodb,
+  mysql,
+  nodejs,
+  postgresql,
+  rails,
+  ruby,
+  sqlserver,
+  tailwind,
+  webpack,
   about01,
   about02,
   about03,

@@ -29,6 +29,10 @@ import sqlserver from '../assets/sqlserver.png';
 import tailwind from '../assets/tailwind.png';
 import webpack from '../assets/webpack.png';
 
+import frontend from '../assets/frontend.png';
+import backend from '../assets/backend.png';
+import fullstack from '../assets/fullstack.png';
+
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
@@ -77,6 +81,9 @@ export default {
   sqlserver,
   tailwind,
   webpack,
+  frontend,
+  backend,
+  fullstack,
   about01,
   about02,
   about03,

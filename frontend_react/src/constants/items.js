@@ -1,3 +1,5 @@
+import { images } from '../constants';
+
 const navItems = [
     {
         id: "home",
@@ -21,4 +23,22 @@ const navItems = [
     }, 
 ];
 
-export default navItems;
+const abouts = [
+    {
+        title: 'Front-end Development',
+        description: 'I am a good Front-end Developer',
+        image: images.about01,
+    },
+    {
+        title: 'Back-end Development',
+        description: 'I am a good Back-end Developer',
+        image: images.about02,
+    },
+    {
+        title: 'Full-stack Development',
+        description: 'I am a good Full-Stack Developer',
+        image: images.about04,
+    }
+];
+
+export { navItems, abouts };

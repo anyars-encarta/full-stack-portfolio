@@ -1,4 +1,4 @@
-export const navItems = [
+const navItems = [
     {
         id: "home",
         title: "Home",
@@ -19,4 +19,6 @@ export const navItems = [
         id: "contact",
         title: "Contact",
     }, 
-]
+];
+
+export default navItems;

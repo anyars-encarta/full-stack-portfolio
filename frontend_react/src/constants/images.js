@@ -38,9 +38,12 @@ import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
+import tdportfolio from '../assets/tdportfolio.png';
+
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
+import anyars from '../assets/anyars.png';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -88,9 +91,11 @@ export default {
   about02,
   about03,
   about04,
+  tdportfolio,
   profile,
   circle,
   logo,
+  anyars,
   adidas,
   amazon,
   asus,

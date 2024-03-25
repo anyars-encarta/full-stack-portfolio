@@ -45,4 +45,27 @@ const abouts = [
     }
 ];
 
-export { navItems, abouts };
+const categories = [
+    {
+        id: "ui-ux",
+        title: "UI/UX",
+    },
+    {
+        id: "web-app",
+        title: "Web App",
+    },
+    {
+        id: "mobile-app",
+        title: "Mobile App",
+    },
+    {
+        id: "react-js",
+        title: "React JS",
+    },
+    {
+        id: "all",
+        title: "All",
+    },
+];
+
+export { navItems, abouts, categories };

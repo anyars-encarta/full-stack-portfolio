@@ -14,7 +14,18 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
 
   const handleWorkFilter = (category) => {
+    setActiveFilter(category);
+    setAnimateCard([{y:100, opacity: 0}]);
+    
+    setTimeout(() => {
+      setAnimateCard([{y:0, opacity: 1}]);
 
+      if(category === 'All') {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(category)))
+      }
+    }, 500);
   }
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { motion } from 'framer-motion';
 import emailjs from "@emailjs/browser";
 
 import { images } from '../../constants';
@@ -71,7 +72,12 @@ const Footer = () => {
       <h2 className='head-text'>Take A Coffee & Chat With Me</h2>
 
       <div className='app__footer-cards'>
-        <div className='app__footer-card'>
+        <motion.div
+          whileInView={{ opacity: 1 }}
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.5, type: 'tween' }}
+          className='app__footer-card'
+        >
           <img src={images.email} alt='email' />
           <a
             href='mailto:anyarsencarta@gmail.com'
@@ -79,9 +85,14 @@ const Footer = () => {
           >
             anyarsencarta@gmail.com
           </a>
-        </div>
+        </motion.div>
 
-        <div className='app__footer-card'>
+        <motion.div
+          whileInView={{ opacity: 1 }}
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.5, type: 'tween' }}
+          className='app__footer-card'
+        >
           <img src={images.mobile} alt='mobile' />
           <a
             href='tel:+233 24 211 9972'
@@ -89,47 +100,47 @@ const Footer = () => {
           >
             +233 24 211 9972
           </a>
-        </div>
+        </motion.div>
       </div>
 
       {!isFormSubmitted ?
         <form ref={formRef} onSubmit={handleSubmit} className='app__footer-form app__flex'>
-            <div className='app__flex'>
-              <input
-                className='p-text'
-                type='text'
-                placeholder='Your Name'
-                name='user_name'
-                value={user_name}
-                onChange={handleChangeInput}
-              />
-            </div>
+          <div className='app__flex'>
+            <input
+              className='p-text'
+              type='text'
+              placeholder='Your Name'
+              name='user_name'
+              value={user_name}
+              onChange={handleChangeInput}
+            />
+          </div>
 
-            <div className='app__flex'>
-              <input
-                className='p-text'
-                type='email'
-                placeholder='Your Email'
-                name='user_email'
-                value={user_email}
-                onChange={handleChangeInput}
-              />
-            </div>
+          <div className='app__flex'>
+            <input
+              className='p-text'
+              type='email'
+              placeholder='Your Email'
+              name='user_email'
+              value={user_email}
+              onChange={handleChangeInput}
+            />
+          </div>
 
-            <div className='app__flex'>
-              <textarea
-                className='p-text'
-                placeholder='Your Message'
-                name='user_message'
-                // rows={5}
-                value={user_message}
-                onChange={handleChangeInput}
-              />
-            </div>
+          <div className='app__flex'>
+            <textarea
+              className='p-text'
+              placeholder='Your Message'
+              name='user_message'
+              // rows={5}
+              value={user_message}
+              onChange={handleChangeInput}
+            />
+          </div>
 
-            <button type='submit' className='p-text'>
-              {loading ? 'Sending...' : 'Send Message'}
-            </button>
+          <button type='submit' className='p-text'>
+            {loading ? 'Sending...' : 'Send Message'}
+          </button>
         </form>
         :
         <div>

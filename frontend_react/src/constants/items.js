@@ -63,6 +63,10 @@ const categories = [
         title: "React JS",
     },
     {
+        id: "ruby",
+        title: "Ruby",
+    },
+    {
         id: "all",
         title: "All",
     },

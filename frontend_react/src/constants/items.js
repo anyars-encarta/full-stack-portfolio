@@ -67,6 +67,10 @@ const categories = [
         title: "Ruby",
     },
     {
+        id: "api",
+        title: "API",
+    },
+    {
         id: "all",
         title: "All",
     },

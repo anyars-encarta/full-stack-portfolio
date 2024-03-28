@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from "@emailjs/browser";
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { client } from '../../client';
+// import { client } from '../../client';
 import './Footer.scss';
 
 const Footer = () => {
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',
@@ -20,24 +22,48 @@ const Footer = () => {
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
 
-    setFormData({ ...formData, [name]: value })
+    setFormData({ ...formData, [name]: [value] })
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    const SERVICE = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const TEMPLATE = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    e.preventDefault();
     setLoading(true);
 
-    const contact = {
-      _type: 'contact',
-      name: user_name,
-      email: user_email,
-      message: user_message,
-    };
+    emailjs.send(
+      SERVICE,
+      TEMPLATE,
+      {
+        from_name: user_name,
+        to_name: 'Anyars',
+        from_email: user_email,
+        to_email: 'anyarsencarta@gmail.com',
+        message: user_message,
+      },
+      PUBLIC_KEY
+    ).then(() => {
+      setLoading(false);
+      setIsFormSubmitted(true);
+    }, (error) => {
+      alert(error)
+    })
 
-    client.create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-      })
+    // The code below sends mails to Sanity
+    // const contact = {
+    //   _type: 'contact',
+    //   name: user_name,
+    //   email: user_email,
+    //   message: user_message,
+    // };
+
+    // client.create(contact)
+    //   .then(() => {
+    //     setLoading(false);
+    //     setIsFormSubmitted(true);
+    //   })
   };
 
   return (
@@ -67,48 +93,44 @@ const Footer = () => {
       </div>
 
       {!isFormSubmitted ?
-        <div className='app__footer-form app__flex'>
-          <div className='app__flex'>
-            <input
-              className='p-text'
-              type='text'
-              placeholder='Your Name'
-              name='user_name'
-              value={user_name}
-              onChange={handleChangeInput}
-            />
-          </div>
+        <form ref={formRef} onSubmit={handleSubmit} className='app__footer-form app__flex'>
+            <div className='app__flex'>
+              <input
+                className='p-text'
+                type='text'
+                placeholder='Your Name'
+                name='user_name'
+                value={user_name}
+                onChange={handleChangeInput}
+              />
+            </div>
 
-          <div className='app__flex'>
-            <input
-              className='p-text'
-              type='email'
-              placeholder='Your Email'
-              name='user_email'
-              value={user_email}
-              onChange={handleChangeInput}
-            />
-          </div>
+            <div className='app__flex'>
+              <input
+                className='p-text'
+                type='email'
+                placeholder='Your Email'
+                name='user_email'
+                value={user_email}
+                onChange={handleChangeInput}
+              />
+            </div>
 
-          <div className='app__flex'>
-            <textarea
-              className='p-text'
-              placeholder='Your Message'
-              name='user_message'
-              // rows={5}
-              value={user_message}
-              onChange={handleChangeInput}
-            />
-          </div>
+            <div className='app__flex'>
+              <textarea
+                className='p-text'
+                placeholder='Your Message'
+                name='user_message'
+                // rows={5}
+                value={user_message}
+                onChange={handleChangeInput}
+              />
+            </div>
 
-          <button
-            type='button'
-            className='p-text'
-            onClick={handleSubmit}
-          >
-            {loading ? 'Sending...' : 'Send Message'}
-          </button>
-        </div>
+            <button type='submit' className='p-text'>
+              {loading ? 'Sending...' : 'Send Message'}
+            </button>
+        </form>
         :
         <div>
           <h3 className='head-text'>Thank you for getting in touch!</h3>

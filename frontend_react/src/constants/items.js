@@ -63,6 +63,18 @@ const categories = [
         title: "React JS",
     },
     {
+        id: "redux",
+        title: "Redux",
+    },
+    {
+        id: "html",
+        title: "HTML 5",
+    },
+    {
+        id: "javascript",
+        title: "JavaScript",
+    },
+    {
         id: "ruby",
         title: "Ruby",
     },

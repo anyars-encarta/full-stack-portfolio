@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Tilt } from 'react-tilt';
 import { Tooltip } from 'react-tooltip';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -39,10 +40,11 @@ const Skills = () => {
               className='app__skills-item app__flex'
               key={skill.name}
             >
+              <Tilt options={{ max: 45, scale: 1, speed: 450 }}>
               <div className='app__flex' style={{ backgroundColor: skill.bgColor }}>
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
-
+              </Tilt>
               <p className='p-text'>{skill.name}</p>
             </motion.div>
           ))}

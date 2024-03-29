@@ -54,6 +54,8 @@ const Testimonial = () => {
               <HiChevronLeft />
             </div>
 
+            <p>{currentIndex + 1} of {testimonials.length}</p>
+
             <div className='app__flex' onClick={() => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}>
               <HiChevronRight />
             </div>

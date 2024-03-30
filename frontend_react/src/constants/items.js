@@ -79,6 +79,14 @@ const categories = [
         title: "Ruby",
     },
     {
+        id: "rails",
+        title: "Rails",
+    },
+    {
+        id: "sql",
+        title: "SQL",
+    },
+    {
         id: "api",
         title: "API",
     },

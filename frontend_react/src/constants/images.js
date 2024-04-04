@@ -45,7 +45,7 @@ import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
 import anyars from '../assets/anyars.png';
 import anyarsProfile from '../assets/anyarsProfile.png';
-
+import anyarsProfile1 from '../assets/anyarsProfile1.png';
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
 import asus from '../assets/asus.png';
@@ -98,6 +98,7 @@ export default {
   logo,
   anyars,
   anyarsProfile,
+  anyarsProfile1,
   adidas,
   amazon,
   asus,

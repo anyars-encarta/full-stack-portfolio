@@ -4,7 +4,7 @@
 
  <!-- LOGO -->
 
-  <img src="./frontend_react/src/assets/anyars.png" alt="logo" width="140"  height="auto" />
+  <img src="./frontend_react/src/assets/readme-profile.png" alt="logo" width="140"  height="auto" />
   <br/>
 
 <!-- MAIN HEADING -->

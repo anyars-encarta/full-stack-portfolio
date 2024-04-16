@@ -12,6 +12,7 @@ const Navbar = () => {
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
         <img src={images.anyars} alt='logo' />
+        <span className="material-symbols-outlined">contrast</span>
       </div>
 
       <ul className='app__navbar-links'>
@@ -27,7 +28,7 @@ const Navbar = () => {
 
       <div className='app__navbar-menu'>
         <HiMenuAlt4 onClick={() => setToggle(true)} />
-
+        
         {toggle && (
           <motion.div
             whileInView={{ x: [300, 0] }}

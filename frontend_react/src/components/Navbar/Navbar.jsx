@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
         <img src={images.anyars} alt='logo' />
-        <span className="material-symbols-outlined">contrast</span>
+        <span className="material-symbols-outlined">dark_mode</span>
       </div>
 
       <ul className='app__navbar-links'>

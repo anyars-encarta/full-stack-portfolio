@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { DarkModeOutlined, LightModeOutlined} from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { navItems } from '../../constants/items';
 import './Navbar.scss';
+import { DarkModeContext } from '../../context/darkModeContext';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  
+  const { darkMode, dispatch } = useContext(DarkModeContext)
+
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
         <img src={images.anyars} alt='logo' />
-        <DarkModeOutlined className='darkIcon' />
+        {darkMode ? (
+              <LightModeOutlined className='darkIcon' onClick={() => dispatch({ type: "TOGGLE" })} />
+            ) : (
+              <DarkModeOutlined className='darkIcon' onClick={() => dispatch({ type: "TOGGLE" })} />
+            )}
       </div>
 
       <ul className='app__navbar-links'>

@@ -55,7 +55,7 @@ const Work = () => {
         ))}
       </div>
 
-      <p>{filterWork.length} projects match the "{activeFilter}" category</p>
+      <p className='filteredWorks'>{filterWork.length} projects match the "{activeFilter}" category</p>
 
       <motion.div
         animate={animateCard}

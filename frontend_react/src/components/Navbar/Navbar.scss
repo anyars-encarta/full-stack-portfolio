@@ -92,10 +92,11 @@
     svg {
         width: 70%;
         height: 70%;
-        color: var(--white-color)
+        color: var(--white-color);
+        cursor: pointer;
     }
 
-    div {
+    .mobileMenu {
         position: fixed;
         top: 0;
         bottom: 0;

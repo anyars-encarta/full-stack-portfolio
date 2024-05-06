@@ -28,7 +28,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <>
+    <div className='skillsContainer'>
       <h2 className='head-text'>Skills & Experiences</h2>
 
       <div className='app__skills-container'>
@@ -91,7 +91,7 @@ const Skills = () => {
           ))}
         </motion.div>}
       </div>
-    </>
+    </div>
   )
 }
 

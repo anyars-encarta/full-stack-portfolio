@@ -34,6 +34,7 @@ const Navbar = () => {
           <motion.div
             whileInView={{ x: [300, 0] }}
             transition={{ duration: 0.85, ease: 'easeOut' }}
+            className='mobileMenu'
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>

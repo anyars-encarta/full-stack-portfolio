@@ -1,6 +1,8 @@
 .app.dark {
-    background-color: #222;
-
+    .app {
+        background-color: #222;
+    }
+    
     .app__whitebg {
         background-color: #222;
     }
@@ -35,6 +37,8 @@
 
     // Header
     .app__header {
+        // background-color:#111;
+
         .app__header-badge {
 
             .badge-cmp,
@@ -53,6 +57,14 @@
                 background: #222;
             }
         }
+
+        // .app__social {
+        //     background-color: #111 !important;
+        // }
+
+        // .app__navigation {
+        //     background-color: #111 !important;
+        // }
     }
 
     // About

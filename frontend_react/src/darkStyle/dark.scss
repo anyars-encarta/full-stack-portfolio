@@ -2,7 +2,7 @@
     .app {
         background-color: #222;
     }
-    
+
     .app__whitebg {
         background-color: #222;
     }
@@ -11,8 +11,11 @@
         background-color: #111;
     }
 
+    // Navbar
     .app__navbar {
-        background-color: #222;
+        background-color: rgba(34, 34, 34, 0.25);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
 
         .darkIcon {
             color: gray;
@@ -192,7 +195,8 @@
             background-color: #111;
         }
 
-        input, textarea {
+        input,
+        textarea {
             background-color: #111;
         }
     }

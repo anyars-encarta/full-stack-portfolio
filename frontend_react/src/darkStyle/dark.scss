@@ -87,17 +87,23 @@
             color: lightgray;
         }
 
+        .app__work-filter-item.p-text {
+            color: gray;
+        }
+
+        .app__work-filter-item.item-active {
+            background-color: #222;
+            color: lightgray;
+        }
+
         .app__work-filter-item {
             background-color: #222;
 
             &:hover {
-                color: gray;
+                color: lightgray;
             }
 
-            .item-active {
-                background-color: #222;
-                color: gray;
-            }
+            
         }
 
         .filteredWorks {

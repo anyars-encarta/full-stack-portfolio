@@ -1,0 +1,215 @@
+.app.dark {
+    #home {
+        background: none;
+        background-color:#111;
+    }
+
+    .app {
+        background-color: #222;
+    }
+
+    .app__whitebg {
+        background-color: #222;
+    }
+
+    .app__primarybg {
+        background-color: #111;
+    }
+
+    // Navbar
+    .app__navbar {
+        background-color: rgba(34, 34, 34, 0.25);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+
+        .darkIcon {
+            color: gray;
+        }
+
+        .app__navbar-menu {
+            background-color: gray;
+
+            svg {
+                color: #111;
+            }
+
+            .mobileMenu {
+                background-color: #111;
+
+                svg {
+                    color: gray;
+                }
+            }
+        }
+    }
+
+    // Header
+    .app__header {
+        
+        // background-color:#111;
+
+        .app__header-badge {
+
+            .badge-cmp,
+            .tag-cmp {
+                background-color: #222;
+
+                .head-text {
+                    color: gray;
+                }
+            }
+
+        }
+
+        .app__header-circles {
+            div {
+                background: #222;
+            }
+        }
+
+        // .app__social {
+        //     background-color: #111 !important;
+        // }
+
+        // .app__navigation {
+        //     background-color: #111 !important;
+        // }
+    }
+
+    // About
+    .app__about {
+        .head-text {
+            color: gray;
+        }
+
+        .bold-text {
+            color: lightgray;
+        }
+    }
+
+    // Works
+    .app__works {
+        .head-text {
+            color: lightgray;
+        }
+
+        .app__work-filter-item.p-text {
+            color: gray;
+        }
+
+        .app__work-filter-item.item-active {
+            background-color: #222;
+            color: lightgray;
+        }
+
+        .app__work-filter-item {
+            background-color: #222;
+
+            &:hover {
+                color: lightgray;
+            }
+
+            
+        }
+
+        .filteredWorks {
+            color: gray;
+        }
+
+        .app__work-item {
+            background-color: #222;
+            color: gray;
+        }
+
+        .bold-text {
+            color: lightgray;
+        }
+
+        .app__work-tag {
+            background-color: #222;
+        }
+    }
+
+    .app__social {
+        div {
+            background-color: #222;
+
+            svg {
+                color: lightgray;
+            }
+        }
+    }
+
+    .copyright {
+        p {
+            color: lightgray;
+        }
+    }
+
+    // Skills
+    .skillsContainer {
+
+        .head-text,
+        .bold-text,
+        .company {
+            color: lightgray;
+        }
+    }
+
+    // Testimonials
+    .app__testimonial {
+        .head-text {
+            color: lightgray;
+        }
+
+        .app__testimonial-item {
+            background-color: #222;
+        }
+
+        p {
+            color: gray;
+        }
+
+        .bold-text {
+            color: lightgray;
+        }
+
+        .p-text {
+            color: gray;
+        }
+
+        .app__testimonial-btns {
+            div {
+                background-color: #222;
+
+                &:hover {
+                    background-color: lightgray;
+
+                    svg {
+                        color: #222;
+                    }
+                }
+
+                svg {
+                    color: gray;
+                }
+            }
+        }
+    }
+
+    // Footer / Contact
+    .app__footer {
+        .head-text {
+            color: lightgray;
+        }
+
+        .app__footer-card {
+            background-color: #111;
+        }
+
+        input,
+        textarea {
+            background-color: #111;
+        }
+    }
+}

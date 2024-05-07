@@ -1,4 +1,9 @@
 .app.dark {
+    #home {
+        background: none;
+        background-color:#111;
+    }
+
     .app {
         background-color: #222;
     }
@@ -40,6 +45,7 @@
 
     // Header
     .app__header {
+        
         // background-color:#111;
 
         .app__header-badge {

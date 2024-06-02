@@ -39,7 +39,6 @@
 # 📖 Anyars | Portfolio <a name="about-project"></a>
 
 > This is a Full-stack Portfolio project built with ReactJS and Sanity Studio to showcase my skills, achievements and abilities.
-Watch this [Video](https://www.loom.com/share/d61ef8b260cf44faaad891c75b2531bc?sid=a04ee694-76da-4c31-b39f-248350f8136d) for a demontration of the project.
 
 ## 🛠 Built With <a name="built-with"></a>
 1. React.js
@@ -87,7 +86,7 @@ Watch this [Video](https://www.loom.com/share/d61ef8b260cf44faaad891c75b2531bc?s
 
 LIVE DEMO
 
-> Visit the [live](https://anyars-encarta.github.io) page of my Portfolio.
+> Visit the [live](https://anyars-portfolio.vercel.app/) page of my Portfolio.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -24,7 +24,7 @@ const SocialMedia = () => {
                 <BsTwitter onClick={() => window.open('https://twitter.com/anyarsencarta', '_blank')} />
             </div>
             <div>
-                <BsYoutube onClick={() => window.open('www.youtube.com/@anyarsencarta', '_blank')} />
+                <BsYoutube onClick={() => window.open('https://www.youtube.com/@anyarsencarta', '_blank')} />
             </div>
         </div>
     )

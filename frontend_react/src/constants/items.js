@@ -63,6 +63,10 @@ const categories = [
         title: "React JS",
     },
     {
+        id: "next-js",
+        title: "Next JS",
+    },
+    {
         id: "redux",
         title: "Redux",
     },

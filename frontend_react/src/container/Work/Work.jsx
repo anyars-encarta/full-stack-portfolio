@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
-import { categories } from '../../constants/items';
+// import { categories } from '../../constants/items';
 import './Work.scss';
 
 const Work = () => {
@@ -13,6 +13,7 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   const handleWorkFilter = (category) => {
     setActiveFilter(category);
@@ -31,11 +32,17 @@ const Work = () => {
 
   useEffect(() => {
     const query = '*[_type == "works"]';
+    const categoryQuery = '*[_type == "appCategories"]';
 
     client.fetch(query)
       .then((data) => {
         setWorks(data);
         setFilterWork(data);
+      });
+
+      client.fetch(categoryQuery)
+      .then((data) => {
+        setCategories(data);
       });
   }, []);
 
